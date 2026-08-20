@@ -33,6 +33,11 @@ function Header() {
                   Listar Contactos
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/crearcontacto" className="nav-link">
+                  Crear Contactos
+                </Link>
+              </li>
             </ul>
             <form className="d-flex" role="search">
               <input
