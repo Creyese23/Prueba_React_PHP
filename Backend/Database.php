@@ -1,5 +1,5 @@
 <?php
-       /* className Database{
+    class Database{
             private $host_name="localhost";
             private $nombre="db_contactos";
             private $usuario="root";
@@ -9,7 +9,7 @@
                 try{
                     $conexion = new PDO(
                         "mysql:host={$this->host_name};
-                        db_name={$this->nombre}; charset=utf8mb4_general_ci",
+                        dbname={$this->nombre}; charset=utf8",
                         $this->usuario,
                         $this->password
                     );
@@ -25,20 +25,5 @@
                     exit();
                 }
             }
-        }*/
-
-            error_reporting(E_ALL);
-            ini_set('display_errors', 1);
-            header("Access-Control-Allow-Origin: *");
-            header("Access-Control-Allow-Headers: *");
-            header("Access-Control-Allow-Methods: *");
-
-            $conexion = mysqli_connect("localhost", "root", "", "db_contactos");
-            if ($conexion===false) {
-                die("ERROR: Error de conexión a la base de datos: " . mysqli_connect_error());
-            }
-
-        $method = $_SERVER['REQUEST_METHOD'];
-
-        echo "test-----".$method; die;
+        }
 ?>
