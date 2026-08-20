@@ -1,6 +1,6 @@
 <?php
 
-    class contactoController{
+    className contactoController{
         private $model;
 
         public function __construct($model){

@@ -1,5 +1,5 @@
 <?php 
-    class Contacto{
+    className Contacto{
         private $conexion;
 
         public function __construct($conexion){

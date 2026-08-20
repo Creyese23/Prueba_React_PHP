@@ -1,5 +1,5 @@
 <?php
-        class Database{
+       /* className Database{
             private $host_name="localhost";
             private $nombre="db_contactos";
             private $usuario="root";
@@ -25,5 +25,20 @@
                     exit();
                 }
             }
-        }
+        }*/
+
+            error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+            header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Headers: *");
+            header("Access-Control-Allow-Methods: *");
+
+            $conexion = mysqli_connect("localhost", "root", "", "db_contactos");
+            if ($conexion===false) {
+                die("ERROR: Error de conexión a la base de datos: " . mysqli_connect_error());
+            }
+
+        $method = $_SERVER['REQUEST_METHOD'];
+
+        echo "test-----".$method; die;
 ?>

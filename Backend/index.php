@@ -19,12 +19,12 @@
     $url = rtrim($url, '/');
 
     if($method ==='GET' && $url === '/contactos') {
-        $controller->listarContactos();
+        $controller->index();
     } elseif ($method === 'POST' && $url === '/contactos') {
         $controller->datos();
     } elseif ($method === 'DELETE' && preg_match('/\/contactos\/(\d+)/', $url, $matches)) {
         $id = $matches[1];
-        $controller->deleteContacto($id);
+        $controller->destroy($id);
     } else {
         http_response_code(404);
         echo json_encode([
